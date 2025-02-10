@@ -13,7 +13,7 @@ const ExpensesTrackerPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#05e6763f] to-[#01309d50]">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto  px-4 md:px-0 lg:px-4 py-8">
         {isLoading ? <HeaderSkeleton /> : <Header expenses={expenses} />}
         <Analytics loading={isLoading} expenses={expenses} />
 

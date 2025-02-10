@@ -12,15 +12,17 @@ const Header = ({ expenses }: HeaderProps) => {
   );
 
   return (
-    <div className="flex items-center justify-between mb-8">
-      <h1 className="text-3xl font-bold text-primary flex items-center gap-2">
+    <div className="flex items-center justify-between mb-8 flex-wrap ">
+      <div className=" flex items-center gap-2 max-sm:mb-2">
         {/* <Wallet className="w-8 h-8" /> */}
         <img loading="lazy" width={50} height={50} src={Logo} alt="palm logo" />
-        Expense Tracker
-      </h1>
-      <div className="bg-white rounded-lg shadow-md px-4 py-2">
-        <p className="text-sm text-gray-600">Total Expenses</p>
-        <p className="text-2xl font-bold text-primary">
+        <h1 className="text-xl lg:text-3xl font-bold text-primary">
+          Expense Tracker
+        </h1>
+      </div>
+      <div className="bg-white rounded-lg shadow-md px-4 py-2 max-sm:w-full max-sm:flex items-center justify-between ">
+        <p className="text-sm text-gray-600 font-bold">Total Expenses</p>
+        <p className="text-md  md:text-2xl font-bold text-primary">
           ${totalExpenses.toFixed(2)}
         </p>
       </div>

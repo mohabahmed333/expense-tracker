@@ -35,6 +35,7 @@ const useEditExpensiveStore = create<IExpensiveTracker>()(
       cancelEditExpensive: () =>
         set({
           expensive: null,
+          IsOpenMobileEdit: false,
         }),
     }),
     {

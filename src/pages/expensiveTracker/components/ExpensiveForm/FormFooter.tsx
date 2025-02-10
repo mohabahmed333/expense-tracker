@@ -1,13 +1,17 @@
+import { Dispatch, SetStateAction } from "react";
+
 const FormFooter = ({
   isSubmitting,
   editingExpense,
   reset,
   RemoveEditExpense,
+  setIsFormVisible,
 }: {
   isSubmitting: boolean;
   editingExpense: boolean;
   reset: () => void;
   RemoveEditExpense: () => void;
+  setIsFormVisible?: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
     <div className="flex gap-2">
@@ -29,6 +33,7 @@ const FormFooter = ({
         <button
           type="button"
           onClick={() => {
+            setIsFormVisible && setIsFormVisible(false);
             RemoveEditExpense();
             reset();
           }}

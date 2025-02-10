@@ -26,7 +26,7 @@ const ExpensiveList = () => {
   });
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-3">
+    <div className="bg-white rounded-xl shadow-lg p-3 max-h-fit">
       <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
         <PieChart className="w-5 h-5 text-primary" />
         Recent Expenses

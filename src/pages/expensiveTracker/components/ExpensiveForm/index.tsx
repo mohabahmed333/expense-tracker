@@ -56,7 +56,7 @@ const ExpensiveForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 max-h-[700px] overflow-auto  max-sm:hidden">
+    <div className="bg-white rounded-xl shadow-lg p-6 max-h-[800px] overflow-auto  max-sm:hidden">
       <FormHeader editingExpense={!!editingExpense} />
 
       <ExpensiveFormComponent

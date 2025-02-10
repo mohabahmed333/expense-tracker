@@ -1,9 +1,20 @@
-import { Edit, PlusCircle } from "lucide-react";
+import { Edit, PlusCircle, X } from "lucide-react";
+import { Dispatch, SetStateAction } from "react";
 
-const FormHeader = ({ editingExpense }: { editingExpense: boolean }) => {
+const FormHeader = ({
+  editingExpense,
+  setIsFormVisible,
+  RemoveEditExpense,
+  reset,
+}: {
+  editingExpense: boolean;
+  setIsFormVisible?: Dispatch<SetStateAction<boolean>>;
+  RemoveEditExpense?: () => void;
+  reset?: () => void;
+}) => {
   return (
-    <div>
-      <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+    <div className="sticky top-0 bg-white z-10 h-fit  mb-0 flex justify-between items-center   p-3">
+      <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
         {editingExpense ? (
           <>
             <Edit className="w-5 h-5 text-primary" />
@@ -16,6 +27,15 @@ const FormHeader = ({ editingExpense }: { editingExpense: boolean }) => {
           </>
         )}
       </h2>
+      <button
+        onClick={() => {
+          reset && reset();
+          setIsFormVisible && setIsFormVisible(false);
+          RemoveEditExpense && RemoveEditExpense();
+        }}
+      >
+        <X className="w-6 h-6" />
+      </button>
     </div>
   );
 };

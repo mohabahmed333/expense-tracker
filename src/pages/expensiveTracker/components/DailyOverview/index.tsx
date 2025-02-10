@@ -10,14 +10,14 @@ const DailyOverview = ({ expenses }: DailyOverviewProps) => {
   const { dailyByCategory, dailyTotal } = useDailyExpenses({ expenses });
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
-      <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-        <BarChart className="w-5 h-5 text-primary" />
+      <h2 className="text-sm md:text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+        <BarChart className="w-5 h-5 text-primary  " />
         Daily Overview
       </h2>
       <div className="space-y-4">
         <div className="flex justify-between items-center">
           <p className="text-gray-600">Total Today</p>
-          <p className="text-2xl font-bold text-primary">
+          <p className="text-md md:text-2xl font-bold text-primary ">
             ${dailyTotal.toFixed(2)}
           </p>
         </div>

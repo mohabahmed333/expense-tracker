@@ -14,6 +14,7 @@ interface ExpensiveFormProps {
   editingExpense: boolean;
   RemoveEditExpense: () => void;
   form: UseFormReturn<ExpensiveFormData>;
+  setIsFormVisible?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ExpensiveFormComponent: React.FC<ExpensiveFormProps> = ({
@@ -21,6 +22,7 @@ const ExpensiveFormComponent: React.FC<ExpensiveFormProps> = ({
   editingExpense,
   RemoveEditExpense,
   form,
+  setIsFormVisible,
 }) => {
   const {
     register,
@@ -29,7 +31,7 @@ const ExpensiveFormComponent: React.FC<ExpensiveFormProps> = ({
     formState: { errors, isSubmitting },
   } = form;
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6">
       <Input
         errors={errors}
         labelText="Enter a name"
@@ -89,6 +91,7 @@ const ExpensiveFormComponent: React.FC<ExpensiveFormProps> = ({
         editingExpense={editingExpense}
         reset={reset}
         RemoveEditExpense={RemoveEditExpense}
+        setIsFormVisible={setIsFormVisible}
       />
     </form>
   );

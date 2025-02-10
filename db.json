@@ -1,3 +1,166 @@
 {
-  "expenses": []
+  "expenses": [
+    {
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": "",
+      "id": "33ab"
+    },
+    {
+      "id": "33ab",
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": ""
+    },
+    {
+      "id": "33ab",
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": ""
+    },
+    {
+      "id": "33ab",
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": ""
+    },
+    {
+      "id": "33ab",
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": ""
+    },
+    {
+      "id": "33ab",
+      "category": "food_dining",
+      "paymentMethod": "cash",
+      "name": "test",
+      "amount": 12321,
+      "date": "2025-02-10",
+      "notes": ""
+    },
+    {
+      "id": "33ab",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-10",
+      "category": "food_dining",
+      "amount": 12321123,
+      "name": "testadsasd"
+    },
+    {
+      "id": "33ab",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-10",
+      "category": "food_dining",
+      "amount": 12321123,
+      "name": "testadsasd"
+    },
+    {
+      "id": "dd88",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "2a45",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "bb7b",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "cec6",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "3614",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "ddc9",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "d896",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132132,
+      "name": "reqwqwe"
+    },
+    {
+      "id": "a793",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-13",
+      "category": "food_dining",
+      "amount": 132321,
+      "name": "wqeqwe"
+    },
+    {
+      "id": "aafd",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-11",
+      "category": "food_dining",
+      "amount": 123123,
+      "name": "dsasda"
+    },
+    {
+      "id": "20a7",
+      "notes": "",
+      "paymentMethod": "cash",
+      "date": "2025-02-11",
+      "category": "food_dining",
+      "amount": 123123,
+      "name": "qeqwweq"
+    }
+  ]
 }

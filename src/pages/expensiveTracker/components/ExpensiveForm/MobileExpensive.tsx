@@ -14,7 +14,7 @@ import {
   clearEditExpensive,
   getEditExpensiveToEdit,
 } from "../../store/ExpensiveTracker";
-import { PlusCircle, X } from "lucide-react";
+import { PlusCircle } from "lucide-react";
 import ExpenseFormSkeleton from "./ExpensiveFormSkelton";
 const ExpensiveFormComponent = lazy(() => import("./Form"));
 const ExpensiveFormMobile = () => {
@@ -60,7 +60,7 @@ const ExpensiveFormMobile = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         onClick={() => setIsFormVisible(true)}
         className="sm:hidden fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg flex items-center gap-2"
@@ -74,27 +74,23 @@ const ExpensiveFormMobile = () => {
         } sm:static sm:opacity-100 sm:visible`}
       >
         <div
-          className={`bg-white rounded-xl shadow-lg p-6 max-h-[700px] overflow-auto transition-transform duration-300 transform
+          className={`bg-white rounded-xl shadow-lg  pt-0 max-h-[500px] overflow-auto transition-transform duration-300 transform
              ${isFormVisible ? "translate-y-0 scale-100" : "translate-y-full scale-95"}
               sm:translate-y-0 sm:scale-100 fixed bottom-0 left-0 right-0 sm:static w-full sm:w-auto`}
         >
-          <button
-            onClick={() => {
-              setIsFormVisible(false);
-              RemoveEditExpense();
-            }}
-            className="absolute top-4 right-4 text-gray-600 sm:hidden"
-          >
-            <X className="w-6 h-6" />
-          </button>
-
-          <FormHeader editingExpense={!!editingExpense} />
+          <FormHeader
+            editingExpense={!!editingExpense}
+            RemoveEditExpense={RemoveEditExpense}
+            setIsFormVisible={setIsFormVisible}
+            reset={form.reset}
+          />
           <Suspense fallback={<ExpenseFormSkeleton />}>
             <ExpensiveFormComponent
               onSubmit={onSubmit}
               RemoveEditExpense={RemoveEditExpense}
               editingExpense={!!editingExpense}
               form={form}
+              setIsFormVisible={setIsFormVisible}
             />
           </Suspense>
         </div>
