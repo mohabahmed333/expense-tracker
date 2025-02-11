@@ -12,6 +12,7 @@ const FormHeader = ({
   RemoveEditExpense?: () => void;
   reset?: () => void;
 }) => {
+  const mobile = window.innerWidth < 760;
   return (
     <div className="sticky top-0 bg-white z-10 h-fit  mb-0 flex justify-between items-center   p-3">
       <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
@@ -27,15 +28,18 @@ const FormHeader = ({
           </>
         )}
       </h2>
-      <button
-        onClick={() => {
-          reset && reset();
-          setIsFormVisible && setIsFormVisible(false);
-          RemoveEditExpense && RemoveEditExpense();
-        }}
-      >
-        <X className="w-6 h-6" />
-      </button>
+      {mobile && (
+        <button
+          onClick={() => {
+            reset && reset();
+            setIsFormVisible && setIsFormVisible(false);
+            RemoveEditExpense && RemoveEditExpense();
+          }}
+          aria-label="close and cancel  form"
+        >
+          <X className="w-6 h-6" />
+        </button>
+      )}
     </div>
   );
 };
