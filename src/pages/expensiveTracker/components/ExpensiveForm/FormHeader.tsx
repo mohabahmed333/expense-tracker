@@ -33,7 +33,6 @@ const FormHeader = ({
           setIsFormVisible && setIsFormVisible(false);
           RemoveEditExpense && RemoveEditExpense();
         }}
-        aria-label="close and cancel  form"
       >
         <X className="w-6 h-6" />
       </button>

@@ -1,7 +1,7 @@
 import DailyOverview from "../DailyOverview";
 import MonthlyOverview from "../MonthlyOverview";
-import MonthlyOverviewSkeleton from "../MonthlyOverview/MonthlyOverviewSkeleton";
-import DailyOverviewSkeleton from "../DailyOverview/DailyOverviewSkeleton";
+import MonthlyOverviewSkeleton from "../MonthlyOverview/MonthlyOverviewSkelton";
+import DailyOverviewSkeleton from "../DailyOverview/DailyOverviewSkelton";
 import { TExpense } from "@/ts/types/Expensive";
 interface AnalyticsProps {
   loading: boolean;
