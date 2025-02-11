@@ -1,9 +1,9 @@
-import { FieldErrors, Path, UseFormRegister } from 'react-hook-form';
-import { FieldValues } from 'react-hook-form';
-import classNames from '../../lib/classNames';
-import { HtmlHTMLAttributes, ReactNode } from 'react';
-import { Error } from './Error';
-import { Label } from './Label';
+import { FieldErrors, Path, UseFormRegister } from "react-hook-form";
+import { FieldValues } from "react-hook-form";
+import classNames from "../../lib/classNames";
+import { HtmlHTMLAttributes, ReactNode } from "react";
+import { Error } from "./Error";
+import { Label } from "./Label";
 
 interface SelectInputProps<T extends FieldValues> {
   name: Path<T>;
@@ -22,18 +22,23 @@ export const SelectInput = <T extends FieldValues>({
   className,
   labelText,
   icon,
-  options
+  options,
 }: SelectInputProps<T>) => {
   return (
     <div>
-      <Label labelText={labelText} />
+      <Label labelText={labelText} htmlFor={name} />
       <div className="relative">
-        {icon && <div className="absolute left-3 top-1/2 transform -translate-y-1/2">{icon}</div>}
+        {icon && (
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+            {icon}
+          </div>
+        )}
         <select
+          id={name}
           className={classNames(
-            'pl-10 w-full rounded-lg border focus:border-indigo-500 focus:ring-indigo-500 shadow-sm',
-            errors[name] ? 'border-red-500' : 'border-gray-300',
-            className ?? ""
+            "pl-10 w-full rounded-lg border focus:border-indigo-500 focus:ring-indigo-500 shadow-sm",
+            errors[name] ? "border-red-500" : "border-gray-300",
+            className ?? "",
           )}
           {...register(name)}
         >

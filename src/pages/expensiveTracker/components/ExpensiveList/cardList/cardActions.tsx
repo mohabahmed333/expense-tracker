@@ -34,12 +34,14 @@ const CardActions = ({ expense }: { expense: TExpense }) => {
       <button
         onClick={() => handleEdit(expense)}
         className="p-1 hover:bg-gray-200 rounded-full transition-colors"
+        aria-label="edit expense"
       >
         <Edit className="w-4 h-4 text-gray-600" />
       </button>
       <button
         onClick={() => setOpen(true)}
         className="p-1 hover:bg-gray-200 rounded-full transition-colors"
+        aria-label="delete expense"
       >
         <Trash2 className="w-4 h-4 text-red-600" />
       </button>

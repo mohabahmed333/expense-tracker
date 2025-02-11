@@ -4,8 +4,8 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-    --primary: #10b55d;
-    --secondary: #0631a0;
+    --primary: #008842;
+    --secondary: #333;
   }
 }
 ::-webkit-scrollbar {

@@ -10,7 +10,7 @@ const CardList = ({ expenses }: { expenses: TExpense[] }) => {
         </p>
       ) : (
         expenses.map((expense) => (
-          <CardItem expense={expense} key={expense.id} />
+          <CardItem expense={expense} key={expense.id + Math.random() * 10} />
         ))
       )}
     </div>

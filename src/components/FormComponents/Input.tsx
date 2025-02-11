@@ -30,7 +30,7 @@ export const Input = <T extends FieldValues>({
 }: InputProps<T>) => {
   return (
     <div>
-      <Label labelText={labelText} />
+      <Label labelText={labelText} htmlFor={name} />
       <div className="relative">
         {icon && (
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
@@ -40,6 +40,7 @@ export const Input = <T extends FieldValues>({
         <input
           type={type}
           step={step}
+          id={name}
           className={classNames(
             "w-full  rounded-lg border focus:border-indigo-500 focus:ring-indigo-500 shadow-sm",
             errors[name] ? "border-red-500" : "border-gray-300",

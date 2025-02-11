@@ -60,10 +60,11 @@ const ExpensiveFormMobile = () => {
   };
 
   return (
-    <div className="relative ">
+    <section className="relative">
       <button
         onClick={() => setIsFormVisible(true)}
         className="sm:hidden fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg flex items-center gap-2"
+        aria-label="add new expense"
       >
         <PlusCircle className="w-5 h-5" /> Add Expense
       </button>
@@ -95,7 +96,7 @@ const ExpensiveFormMobile = () => {
           </Suspense>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

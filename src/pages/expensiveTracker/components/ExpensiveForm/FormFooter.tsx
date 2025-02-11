@@ -20,6 +20,7 @@ const FormFooter = ({
         disabled={isSubmitting}
         className="flex-1 bg-secondary text-white py-2 px-4   rounded-md
            hover:bg-primary hover:text-white transition-colors duration-400"
+        aria-label="submit form"
       >
         {isSubmitting ? (
           <>loading ...</>
@@ -39,6 +40,7 @@ const FormFooter = ({
           }}
           className="bg-secondary text-white py-2 px-4 rounded-lg
              hover:bg-primary hover:text-white transition-colors duration-200"
+          aria-label="cancel form"
         >
           Cancel
         </button>

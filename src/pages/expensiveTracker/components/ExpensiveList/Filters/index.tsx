@@ -45,10 +45,14 @@ const FiltersComponent = ({
     <div>
       <div className="mb-6 space-y-4 ">
         <div>
-          <label className="block text-sm font-medium text-secondary mb-1">
+          <label
+            className="block text-sm font-medium text-secondary mb-1"
+            htmlFor="categoryFilter"
+          >
             Filter by Category
           </label>
           <select
+            id="categoryFilter"
             value={searchParams.category || ""}
             onChange={(e) => updateSearchParamF("category", e.target.value)}
             className="p-2 w-full rounded-lg border focus:border-indigo-500 focus:ring-indigo-500 shadow-sm"
@@ -70,6 +74,7 @@ const FiltersComponent = ({
               <button
                 key={key}
                 className=" bg-primary text-white px-2 py-1 rounded-lg"
+                aria-label={`remove filter by ${key}`}
               >
                 {key}: {value}
                 <X
@@ -81,6 +86,7 @@ const FiltersComponent = ({
             <button
               className="bg-secondary text-white shadow-sm text-default border px-2 py-1 rounded-lg"
               onClick={handleResetSearchParams}
+              aria-label="clear all filters"
             >
               Clear All Filters
               <X className="w-4 h-4 inline-block ml-2" />

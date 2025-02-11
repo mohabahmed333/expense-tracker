@@ -34,6 +34,7 @@ const ConfirmDelete = ({
               confirm();
               setOpen(false);
             }}
+            aria-label="confirm delete"
           >
             confirm
           </button>
@@ -44,6 +45,7 @@ const ConfirmDelete = ({
             type="button"
             className="border border-re h-[40px] rounded-full text-primary
              w-1/2  hover:bg-primary hover:text-white transition-colors"
+            aria-label="cancel delete"
           >
             cancel
           </button>
