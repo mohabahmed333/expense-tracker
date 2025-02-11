@@ -37,7 +37,7 @@ npm install
 
 Running the Application
 Start the Backend (JSON Server)
-npm run json-server
+npm run server
 
 Start the Frontend
 npm run dev
